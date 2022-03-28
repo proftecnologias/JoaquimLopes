@@ -18,6 +18,18 @@
     margin:0 auto;
     height:100vh;
 }
+.contentor-galeria {
+    display:grid;
+    grid-template-rows: 100px auto 50px;
+    grid-template-areas: 
+    'cabeçalho cabeçalho cabeçalho'
+    'cont-principal cont-principal cont-principal'
+    'rodape rodape rodape';
+    gap:5px;
+    width:90%;
+    margin:0 auto;
+    height:100vh; 
+}
 header {
     background:#013220;
     grid-area: cabeçalho;
@@ -28,11 +40,16 @@ nav {
     grid-template-columns: 1fr 4fr;
     height:100px;
 }
+
 .logo {
     display:flex;
     align-items: center;
     justify-content: center;
     height:100%;
+}
+.logo img {
+    height:100px;
+    width:100px;
 }
 nav ul {
     list-style: none;
@@ -97,6 +114,12 @@ footer {
     'cont-principal'
     'cont-secundario'
     'rodape';
+    }
+    .contentor-galeria {
+        grid-template-areas: 
+        'cabeçalho'
+        'cont-principal'
+        'rodape';
     }
     nav {
         grid-template-columns: 1fr;
